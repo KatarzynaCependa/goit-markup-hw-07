@@ -194,7 +194,7 @@ figcaption {
 
 /* Efektywne rozwiązania */
 
-.background-hdr {
+.section--solutions-background {
   background-color: var(--background-gray);
   padding: 200px 0;
   background-image: linear-gradient(var(--background-overlay), var(--background-overlay)),
@@ -203,7 +203,7 @@ figcaption {
   background-repeat: no-repeat;
 }
 
-.header-primary {
+.section__heading-primary {
   font-weight: 900;
   font-size: 44px;
   line-height: 1.36;
@@ -214,7 +214,7 @@ figcaption {
   margin: 0 252px;
 }
 
-.header-primary-button {
+.section__solutions-button {
   font-weight: 700;
   line-height: 1.88;
   display: flex;
@@ -233,33 +233,37 @@ figcaption {
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.header-primary-button:hover,
-.header-primary-button:focus {
+.section__solutions-button:hover,
+.section__solutions-button:focus {
   box-shadow: 0px 4px 4px var(--buttons-shadow);
   cursor: pointer;
 }
 
 /* Nasze atuty */
 
-.strenghts-box {
+.section__strenghts-list {
   display: flex;
   column-gap: 30px;
   margin-bottom: -94px;
 }
 
-.background-strenghts {
+.section__strenghts-list--no-bullets {
+  list-style: none;
+}
+
+.section--strenghts-background {
   width: 270px;
   height: 120px;
   background-color: var(--buttons-background-gray);
 }
 
-.strenghts-icon {
+.section__strenghts-icon {
   margin: 25px 100px;
   background-color: var(--buttons-background-gray);
   border-width: 100px;
 }
 
-.header-tertiary {
+.section__strenghts-heading {
   font-size: 14px;
   line-height: 1.17;
   letter-spacing: 0.03em;
@@ -268,7 +272,7 @@ figcaption {
   padding: 30px 0 10px 0;
 }
 
-.header-tertiary-item {
+.section__strenghts-body {
   font-size: 14px;
   line-height: 1.71;
   letter-spacing: 0.03em;
@@ -483,7 +487,7 @@ figcaption {
   padding: 72px 0 100px;
 }
 
-.footer__heading-tertiary {
+.footer__heading {
   font-size: 14px;
   line-height: 1.14;
   letter-spacing: 0.03em;
