@@ -100,14 +100,6 @@ figcaption {
   list-style: none;
 }
 
-.list {
-  list-style: none;
-}
-
-.list {
-  list-style: none;
-}
-
 .header__nav-list {
   display: flex;
   margin-left: 93px;
@@ -286,7 +278,7 @@ figcaption {
 /* Czym się zajmujemy */
 /* Nasz zespół */
 
-.header-secondary {
+.section__heading-secondary {
   font-size: 36px;
   line-height: 1.17;
   text-align: center;
@@ -295,17 +287,21 @@ figcaption {
   margin-bottom: 50px;
 }
 
-.about-box {
+.section__about-list {
   display: flex;
   justify-content: center;
   column-gap: 30px;
 }
 
-.about-box > li {
+.section__about-list > li {
   position: relative;
 }
 
-.header-tertiary-about {
+.section__about-list--no-bullets {
+  list-style: none;
+}
+
+.section__about-list-heading {
   font-size: 14px;
   line-height: 1.17;
   letter-spacing: 0.03em;
@@ -318,37 +314,41 @@ figcaption {
   position: absolute;
 }
 
-.background-about {
+.section__about-overlay {
   background-color: var(--background-overlay-about);
   width: 370px;
   height: 70px;
 }
 
-.background-team {
+.section--team-background {
   background-color: var(--buttons-background-gray);
   padding: 94px 0;
 }
 
-.team-box {
+.section__team-box {
   display: flex;
   justify-content: center;
   column-gap: 30px;
 }
 
-.border-team {
+.section__team-box--no-bullets {
+  list-style: none;
+}
+
+.team-card {
   background: var(--logo-white);
   box-shadow: var(--modal-shadow);
   border-radius: 0px 0px 4px 4px;
 }
 
-.name-profession {
+.team-card__item {
   display: flex;
   justify-content: center;
   flex-direction: column;
   padding: 30px 0 0;
 }
 
-.name {
+.team-card__name {
   font-weight: 500;
   line-height: 1.19;
   text-align: center;
@@ -357,7 +357,7 @@ figcaption {
   margin: 0 0 10px 0;
 }
 
-.profession {
+.team-card__profession {
   font-weight: 400;
   line-height: 1.19;
   text-align: center;
@@ -365,14 +365,14 @@ figcaption {
   color: var(--text-light-gray);
 }
 
-.team-icons-box {
+.team-card__icons-box {
   display: flex;
   gap: 10px;
   justify-content: center;
   margin: 16px 0 30px 0;
 }
 
-.team-social {
+.team-card__icon-link {
   width: 44px;
   height: 44px;
   padding: 12px;
@@ -383,13 +383,13 @@ figcaption {
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.team-social:hover,
-.team-social:focus {
+.team-card__icon-link:hover,
+.team-card__icon-link:focus {
   background-color: var(--logo-blue);
   color: var(--logo-white);
 }
 
-.team-social-icon {
+.team-card__icon-image {
   width: 20px;
   height: 20px;
   display: block;
