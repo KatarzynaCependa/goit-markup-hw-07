@@ -778,14 +778,18 @@ svg {
 
 /* Filtry */
 
-.buttons-box {
+.section__buttons-list {
   display: flex;
   justify-content: center;
   margin-bottom: 50px;
   column-gap: 8px;
 }
 
-.buttons {
+.section__buttons-list--no-bullets {
+  list-style: none;
+}
+
+.section__buttons-list-item {
   font-family: 'Roboto', sans-serif;
   font-weight: 500;
   line-height: 1.63;
@@ -803,8 +807,8 @@ svg {
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.buttons:hover,
-.buttons:focus {
+.section__buttons-list-item:hover,
+.section__buttons-list-item:focus {
   background: var(--logo-blue);
   color: var(--logo-white);
   cursor: pointer;
@@ -813,41 +817,46 @@ svg {
 
 /* Portfolio */
 
-.portfolio-box {
+.portfolio-list {
   display: flex;
   flex-wrap: wrap;
   gap: 30px;
 }
 
-.portfolio-box-item {
+.portfolio-list--no-bullets {
+  list-style: none;
+}
+
+.portfolio-list__item {
   box-sizing: border-box;
   flex-basis: calc((100% - 60px) / 3);
 }
 
-.portfolio-box-item figcaption {
+.portfolio-list__item figcaption {
   display: flex;
   flex-direction: column;
 }
-.shadow:hover .box-overlay {
+
+.portfolio-list__item-shadow:hover .portfolio-list__item-overlay {
   transform: translateY(0);
 }
 
-.shadow:hover .box {
+.portfolio-list__item-shadow:hover .portfolio-list__item-image {
   box-shadow: 0px 4px 4px var(--box-shadow-hover);
   cursor: pointer;
 }
 
-.shadow:hover .border {
+.portfolio-list__item-shadow:hover .portfolio-list__item-border {
   box-shadow: 0px 1px 1px var(--box-shadow-hover2);
   cursor: pointer;
 }
 
-.box {
+.portfolio-list__item-image {
   position: relative;
   overflow: hidden;
 }
 
-.box-overlay {
+.portfolio-list__item-overlay {
   padding: 49px 45px 49px 24px;
   font-weight: 400px;
   font-size: 18px;
@@ -866,17 +875,17 @@ svg {
   transform: translateY(101%);
 }
 
-.portfolio-box-item:focus .box-overlay {
+.portfolio-list__item:focus .portfolio-list__item-overlay {
   transform: translateY(0);
 }
 
-.border {
+.portfolio-list__item-border {
   border-left: 1px solid var(--border-gray);
   border-right: 1px solid var(--border-gray);
   border-bottom: 1px solid var(--border-gray);
 }
 
-.project-name {
+.portfolio-list__item-name {
   font-weight: 700;
   font-size: 18px;
   line-height: 2;
@@ -885,7 +894,7 @@ svg {
   margin: 20px 24px 4px;
 }
 
-.project-type {
+.portfolio-list__item-type {
   line-height: 1.88;
   letter-spacing: 0.03em;
   color: var(--text-light-gray);
