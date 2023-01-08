@@ -1,0 +1,32 @@
+.services-list {
+  display: flex;
+  justify-content: center;
+  column-gap: 30px;
+}
+
+.services-list > li {
+  position: relative;
+}
+
+.services-list--no-bullets {
+  list-style: none;
+}
+
+.services-list__heading {
+  font-size: 14px;
+  line-height: 1.17;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: var(--logo-white);
+  text-align: center;
+  align-items: center;
+  padding-top: 27px;
+  margin-top: 224px;
+  position: absolute;
+}
+
+.services-list__heading--overlay {
+  background-color: var(--background-overlay-about);
+  width: 370px;
+  height: 70px;
+}

@@ -1,0 +1,20 @@
+.clients {
+  display: flex;
+  justify-content: center;
+  column-gap: 30px;
+}
+
+.clients__icon {
+  border: 1px solid var(--icons-gray);
+  border-radius: 4px;
+  fill: var(--icons-gray);
+  transition-property: border-color, fill;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.clients__icon:hover,
+.clients__icon:focus {
+  border-color: var(--logo-blue);
+  fill: var(--logo-blue);
+}
