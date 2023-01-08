@@ -2,69 +2,69 @@
   display: flex;
   justify-content: center;
   column-gap: 30px;
-}
 
-.team-list--no-bullets {
-  list-style: none;
+  &--no-bullets {
+    list-style: none;
+  }
 }
 
 .team-card {
-  background: var(--logo-white);
-  box-shadow: var(--modal-shadow);
+  background: $white;
+  box-shadow: $modalShadow;
   border-radius: 0px 0px 4px 4px;
-}
 
-.team-card__item {
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-  padding: 30px 0 0;
-}
+  &__item {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    padding: 30px 0 0;
+  }
 
-.team-card__name {
-  font-weight: 500;
-  line-height: 1.19;
-  text-align: center;
-  letter-spacing: 0.03em;
-  color: var(--text-black);
-  margin: 0 0 10px 0;
-}
+  &__name {
+    font-weight: 500;
+    line-height: 1.19;
+    text-align: center;
+    letter-spacing: 0.03em;
+    color: $textPrimary;
+    margin: 0 0 10px 0;
+  }
 
-.team-card__profession {
-  font-weight: 400;
-  line-height: 1.19;
-  text-align: center;
-  letter-spacing: 0.03em;
-  color: var(--text-light-gray);
-}
+  &__profession {
+    font-weight: 400;
+    line-height: 1.19;
+    text-align: center;
+    letter-spacing: 0.03em;
+    color: $textSecondary;
+  }
 
-.team-card__icons-box {
-  display: flex;
-  gap: 10px;
-  justify-content: center;
-  margin: 16px 0 30px 0;
-}
+  &__icons-box {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    margin: 16px 0 30px 0;
+  }
 
-.team-card__icon-link {
-  width: 44px;
-  height: 44px;
-  padding: 12px;
-  color: var(--icons-gray);
-  border-radius: 50%;
-  transition-property: background-color, color;
-  transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-}
+  &__icon-link {
+    width: 44px;
+    height: 44px;
+    padding: 12px;
+    color: $iconsPrimary;
+    border-radius: 50%;
+    transition-property: background-color, color;
+    transition-duration: 250ms;
+    transition-timing-function: $defaultTransitionTimingFunction;
 
-.team-card__icon-link:hover,
-.team-card__icon-link:focus {
-  background-color: var(--logo-blue);
-  color: var(--logo-white);
-}
+    &:hover,
+    &:focus {
+      background-color: $active;
+      color: $white;
+    }
+  }
 
-.team-card__icon-image {
-  width: 20px;
-  height: 20px;
-  display: block;
-  fill: currentColor;
+  &__icon-image {
+    width: 20px;
+    height: 20px;
+    display: block;
+    fill: currentColor;
+  }
 }

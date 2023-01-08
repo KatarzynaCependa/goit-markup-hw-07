@@ -719,12 +719,20 @@ svg {
   align-items: center;
 }
 
-.default-checkbox {
+.modal-window__default-checkbox {
   opacity: 0;
   position: absolute;
 }
 
-.default-checkbox:checked + .not-active-custom-checkbox {
+.modal-window__custom-checkbox {
+  opacity: 0;
+}
+
+.modal-window__custom-checkbox--active {
+  opacity: 1;
+}
+
+/* .default-checkbox:checked + .not-active-custom-checkbox {
   opacity: 0;
 }
 
@@ -738,7 +746,7 @@ svg {
 
 .active-custom-checkbox {
   visibility: hidden;
-}
+} */
 
 .statement {
   font-weight: 400;

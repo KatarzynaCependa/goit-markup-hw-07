@@ -12,15 +12,15 @@ $headerBottomLine: #ececec;
 $portfolioBoxBorder: #eeeeee;
 $portfolioBoxOverlay: rgba(33, 150, 243, 0.9);
 $iconsPrimary: #afb1b8;
-$iconsDarkBg: rgba(255, 255, 255, 0.1);
+$iconsBgDark: rgba(255, 255, 255, 0.1);
 $imageOverlay: rgba(47, 48, 58, 0.4);
-$aboutSectionOverlay: rgba(47, 48, 58, 0.8);
+$servicesSectionOverlay: rgba(47, 48, 58, 0.8);
 $newsletterInputBorder: rgba(255, 255, 255, 0.3);
 
 $modalPlaceholder: rgba(117, 117, 117, 0.5);
 $modalBg: rgba(0, 0, 0, 0.2);
 $modalBorder: rgba(33, 33, 33, 0.2);
-$modalCloseBtnBorder: rgba(0, 0, 0, 0.1);
+$modalCloseButtonBorder: rgba(0, 0, 0, 0.1);
 
 /* Shadows */
 
@@ -35,5 +35,4 @@ $portfolioBoxShadow: rgba(0, 0, 0, 0.25);
 $portfolioBoxShadow2: rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
   1px 4px 6px rgba(0, 0, 0, 0.16);
 
-  
-$defaultFontFamily: 'Roboto', sans-serif;
+$defaultTransitionTimingFunction: cubic-bezier(0.4, 0, 0.2, 1);

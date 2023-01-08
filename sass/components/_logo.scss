@@ -5,20 +5,20 @@
   line-height: 1.19;
   letter-spacing: 0.03em;
   text-decoration: none;
-}
 
-.logo--header {
-  color: var(--logo-black);
-}
+  &--header {
+    color: $logoDark;
+  }
 
-.logo--header span {
-  color: var(--logo-blue);
-}
+  &--header span {
+    color: $active;
+  }
 
-.logo--footer {
-  color: var(--logo-white);
-}
+  &--footer {
+    color: $white;
+  }
 
-.logo--footer span {
-  color: var(--logo-blue);
+  &--footer span {
+    color: $active;
+  }
 }

@@ -3,7 +3,7 @@
   position: fixed;
   min-width: 100vw;
   min-height: 100vh;
-  background: var(--modal-background);
+  background: $modalBg;
   left: 0px;
   top: 0px;
   justify-content: center;
@@ -21,172 +21,168 @@
 .modal-window {
   width: 528px;
   height: 581px;
-  background: var(--logo-white);
-  box-shadow: var(--modal-shadow);
+  background: $white;
+  box-shadow: $modalShadow;
   border-radius: 4px;
   position: absolute;
-}
 
-.modal-window__close-button {
-  width: 30px;
-  height: 30px;
-  cursor: pointer;
-  background-color: var(--logo-white);
-  border: 1px solid var(--close-btn-border);
-  border-radius: 50%;
-  margin: 8px 8px 2px 490px;
-}
+  &__close-button {
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+    background-color: $white;
+    border: 1px solid $modalCloseButtonBorder;
+    border-radius: 50%;
+    margin: 8px 8px 2px 490px;
+  }
 
-.modal-window__close-button-image {
-  width: 18px;
-  height: 18px;
-}
+  &__close-button-image {
+    width: 18px;
+    height: 18px;
+  }
 
-svg {
-  vertical-align: middle;
-}
+  &__heading {
+    font-size: 20px;
+    line-height: 1.15;
+    letter-spacing: 0.03em;
+    color: $textPrimary;
+    margin: 0 40px 12px;
+    text-align: center;
+  }
 
-.modal-window__heading {
-  font-size: 20px;
-  line-height: 1.15;
-  letter-spacing: 0.03em;
-  color: var(--text-black);
-  margin: 0 40px 12px;
-  text-align: center;
-}
+  &__form-container {
+    margin-bottom: 20px;
+  }
 
-.modal-window__form-container {
-  margin-bottom: 20px;
-}
+  &__item {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    gap: 4px;
+    transition-property: fill;
+    transition-duration: 250ms;
+    transition-timing-function: $defaultTransitionTimingFunction;
+  }
 
-.modal-window__item {
-  display: flex;
-  flex-direction: column;
-  position: relative;
-  gap: 4px;
-  transition-property: fill;
-  transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-}
+  &__item:not(:last-child) {
+    padding-bottom: 10px;
+  }
 
-.modal-window__item:not(:last-child) {
-  padding-bottom: 10px;
-}
+  &__item:focus-within {
+    fill: $active;
+  }
 
-.modal-window__item:focus-within {
-  fill: var(--logo-blue);
-}
+  &__item > label {
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 1.17;
+    letter-spacing: 0.01em;
+    margin: 0 40px;
+    color: $textSecondary;
+  }
 
-.modal-window__item > label {
-  font-weight: 400;
-  font-size: 12px;
-  line-height: 1.17;
-  letter-spacing: 0.01em;
-  margin: 0 40px;
-  color: var(--text-light-gray);
-}
+  &__item > input,
+  &__item > textarea {
+    border: 1px solid $modalBorder;
+    border-radius: 4px;
+    margin: 0 40px;
+  }
 
-.modal-window__item > input,
-.modal-window__item > textarea {
-  border: 1px solid var(--modal-border);
-  border-radius: 4px;
-  margin: 0 40px;
-}
+  &__item > input {
+    padding: 11px 0 11px 41px;
+  }
 
-.modal-window__item > input {
-  padding: 11px 0 11px 41px;
-}
+  &__item > textarea {
+    padding: 12px 16px;
+    resize: none;
+  }
 
-.modal-window__item > textarea {
-  padding: 12px 16px;
-  resize: none;
-}
+  &__item ::placeholder {
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 1.17;
+    letter-spacing: 0.01em;
+    color: $modalPlaceholder;
+  }
 
-.modal-window__item ::placeholder {
-  font-weight: 400;
-  font-size: 12px;
-  line-height: 1.17;
-  letter-spacing: 0.01em;
-  color: var(--modal-placeholder);
-}
+  &__item-image {
+    position: absolute;
+    display: flex;
+    top: 43%;
+    left: 52px;
+  }
 
-.modal-window__item-image {
-  position: absolute;
-  display: flex;
-  top: 43%;
-  left: 52px;
-}
+  &__text-box {
+    transition-property: border-color;
+    transition-duration: 250ms;
+    transition-timing-function: $defaultTransitionTimingFunction;
+  }
 
-.modal-window__text-box {
-  transition-property: border-color;
-  transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-}
+  &__text-box:focus-within {
+    border-color: $active;
+    outline: none;
+  }
 
-.modal-window__text-box:focus-within {
-  border-color: var(--logo-blue);
-  outline: none;
-}
+  &__declaration-container {
+    margin-bottom: 30px;
+    display: flex;
+    justify-content: center;
+  }
 
-.modal-window__declaration-container {
-  margin-bottom: 30px;
-  display: flex;
-  justify-content: center;
-}
+  &__declaration-container-item {
+    display: flex;
+    align-items: center;
+  }
 
-.modal-window__declaration-container-item {
-  display: flex;
-  align-items: center;
-}
+  &__default-checkbox {
+    opacity: 0;
+    position: absolute;
+  }
 
-.default-checkbox {
-  opacity: 0;
-  position: absolute;
-}
+  &__default-checkbox:checked + &__custom-checkbox--not-active {
+    opacity: 0;
+  }
 
-.default-checkbox:checked + .not-active-custom-checkbox {
-  opacity: 0;
-}
+  &__default-checkbox:checked ~ &__custom-checkbox--active {
+    visibility: visible;
+  }
 
-.default-checkbox:checked ~ .active-custom-checkbox {
-  visibility: visible;
-}
+  &__custom-checkbox--active {
+    visibility: hidden;
+  }
 
-.not-active-custom-checkbox {
-  position: absolute;
-}
+  &__custom-checkbox--not-active {
+    position: absolute;
+  }
 
-.active-custom-checkbox {
-  visibility: hidden;
-}
+  &__statement {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 1.71;
+    letter-spacing: 0.03em;
+    color: $textSecondary;
+    text-align: center;
+    margin-left: 7px;
+  }
 
-.statement {
-  font-weight: 400;
-  font-size: 14px;
-  line-height: 1.71;
-  letter-spacing: 0.03em;
-  color: var(--text-light-gray);
-  text-align: center;
-  margin-left: 7px;
-}
+  &__statement a {
+    color: $active;
+    text-decoration: underline;
+    cursor: pointer;
+  }
 
-.statement a {
-  color: var(--logo-blue);
-  text-decoration: underline;
-  cursor: pointer;
-}
-
-.modal-window__submit-button {
-  font-weight: 700;
-  font-size: 16px;
-  line-height: 1.88;
-  letter-spacing: 0.06em;
-  color: var(--logo-white);
-  background: var(--logo-blue);
-  box-shadow: 0px 4px 4px var(--buttons-shadow);
-  border-radius: 4px;
-  padding: 10px 76px;
-  border: none;
-  cursor: pointer;
-  margin: 0 164px;
+  &__submit-button {
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 1.88;
+    letter-spacing: 0.06em;
+    color: $white;
+    background: $active;
+    box-shadow: 0px 4px 4px $buttonsShadow;
+    border-radius: 4px;
+    padding: 10px 76px;
+    border: none;
+    cursor: pointer;
+    margin: 0 164px;
+  }
 }
