@@ -39,13 +39,13 @@
     position: relative;
     display: block;
 
-    &__nav-item:hover,
-    &__nav-item:focus {
+    &:hover,
+    &:focus {
       color: $active;
-    }
 
-    &--is-active {
-      color: $active;
+      &--is-active {
+        color: $active;
+      }
     }
 
     &--is-active::after {
@@ -91,15 +91,15 @@
     transition-property: color;
     transition-duration: 250ms;
     transition-timing-function: $defaultTransitionTimingFunction;
-  }
 
-  &__contacts-item:hover,
-  &__contacts-item:focus {
-    color: $active;
-  }
+    &:hover,
+    &:focus {
+      color: $active;
+    }
 
-  &__contacts-item:first-child {
-    margin-right: 30px;
+    &:first-child {
+      margin-right: 30px;
+    }
   }
 
   &__contacts-item-icon {

@@ -47,6 +47,29 @@
   &__item {
     box-sizing: border-box;
     flex-basis: calc((100% - 60px) / 3);
+
+    &:focus &__item-overlay {
+      transform: translateY(0);
+    }
+  }
+
+  &__item-overlay {
+    padding: 49px 45px 49px 24px;
+    font-weight: 400px;
+    font-size: 18px;
+    line-height: 1.56;
+    letter-spacing: 0.03em;
+    background-color: $portfolioBoxOverlay;
+    color: $white;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transition-property: transform, box-shadow;
+    transition-duration: 250ms;
+    transition-timing-function: $defaultTransitionTimingFunction;
+    transform: translateY(101%);
   }
 
   &__item figcaption {
@@ -71,29 +94,6 @@
   &__item-image {
     position: relative;
     overflow: hidden;
-  }
-
-  &__item-overlay {
-    padding: 49px 45px 49px 24px;
-    font-weight: 400px;
-    font-size: 18px;
-    line-height: 1.56;
-    letter-spacing: 0.03em;
-    background-color: $portfolioBoxOverlay;
-    color: $white;
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    transition-property: transform, box-shadow;
-    transition-duration: 250ms;
-    transition-timing-function: $defaultTransitionTimingFunction;
-    transform: translateY(101%);
-  }
-
-  &__item:focus &__item-overlay {
-    transform: translateY(0);
   }
 
   &__item-border {

@@ -69,7 +69,7 @@
     border-radius: 4px;
     transition-property: box-shadow;
     transition-duration: 250ms;
-    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-timing-function: $defaultTransitionTimingFunction;
   }
 
   &__hero-button:hover,

@@ -10,11 +10,11 @@
     transition-property: border-color, fill;
     transition-duration: 250ms;
     transition-timing-function: $defaultTransitionTimingFunction;
-  }
 
-  &__icon:hover,
-  &__icon:focus {
-    border-color: $active;
-    fill: $active;
+    &:hover,
+    &:focus {
+      border-color: $active;
+      fill: $active;
+    }
   }
 }

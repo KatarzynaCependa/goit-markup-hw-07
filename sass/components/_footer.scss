@@ -30,15 +30,15 @@
     color: $textFooter;
     text-decoration: none;
     transition: color 250ms $defaultTransitionTimingFunction;
-  }
 
-  &__address-item:hover,
-  &__address-item:focus {
-    color: $active;
-  }
+    &:hover,
+    &:focus {
+      color: $active;
 
-  &__address-item--underline {
-    text-decoration: underline;
+      &--underline {
+        text-decoration: underline;
+      }
+    }
   }
 
   &__box-second {
@@ -74,12 +74,12 @@
     transition-property: background-color, color;
     transition-duration: 250ms;
     transition-timing-function: $defaultTransitionTimingFunction;
-  }
 
-  &__list-item-link:hover,
-  &__list-item-link:focus {
-    background-color: $active;
-    color: $white;
+    &:hover,
+    &:focus {
+      background-color: $active;
+      color: $white;
+    }
   }
 
   &__list-item-icon {
