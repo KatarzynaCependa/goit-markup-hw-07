@@ -72,7 +72,7 @@
     }
   }
 
-  &__item > label {
+  &__item > &__label {
     font-weight: 400;
     font-size: 12px;
     line-height: 1.17;
@@ -81,18 +81,19 @@
     color: $textSecondary;
   }
 
-  &__item > input,
-  &__item > textarea {
+  &__item > &__text-box,
+  &__item > &__text-area {
     border: 1px solid $modalBorder;
     border-radius: 4px;
     margin: 0 40px;
   }
 
-  &__item > input {
+  &__item > &__text-box,
+  &__item > &__default-checkbox {
     padding: 11px 0 11px 41px;
   }
 
-  &__item > textarea {
+  &__item > &__text-area {
     padding: 12px 16px;
     resize: none;
   }
@@ -108,19 +109,19 @@
     transition-property: border-color;
     transition-duration: 250ms;
     transition-timing-function: $defaultTransitionTimingFunction;
+  }
 
-    &:focus-within {
-      border-color: $active;
-      outline: none;
-    }
+  &__text-area::placeholder {
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 1.17;
+    letter-spacing: 0.01em;
+    color: $modalPlaceholder;
+  }
 
-    &::placeholder {
-      font-weight: 400;
-      font-size: 12px;
-      line-height: 1.17;
-      letter-spacing: 0.01em;
-      color: $modalPlaceholder;
-    }
+  &__text-area:focus-within {
+    border-color: $active;
+    outline: none;
   }
 
   &__declaration-container {
@@ -165,7 +166,7 @@
     margin-left: 7px;
   }
 
-  &__statement a {
+  &__statement &__statement-link {
     color: $active;
     text-decoration: underline;
     cursor: pointer;
