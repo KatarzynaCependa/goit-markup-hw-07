@@ -70,11 +70,11 @@
     transition-property: box-shadow;
     transition-duration: 250ms;
     transition-timing-function: $defaultTransitionTimingFunction;
-  }
 
-  &__hero-button:hover,
-  &__hero-button:focus {
-    box-shadow: 0px 4px 4px $buttonsShadow;
-    cursor: pointer;
+    &:hover,
+    &:focus {
+      box-shadow: 0px 4px 4px $buttonsShadow;
+      cursor: pointer;
+    }
   }
 }
