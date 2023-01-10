@@ -4,10 +4,6 @@
   margin-bottom: 50px;
   column-gap: 8px;
 
-  &--no-bullets {
-    list-style: none;
-  }
-
   &__item {
     font-family: 'Roboto', sans-serif;
     font-weight: 500;
@@ -40,17 +36,37 @@
   flex-wrap: wrap;
   gap: 30px;
 
-  &--no-bullets {
-    list-style: none;
-  }
-
   &__item {
     box-sizing: border-box;
     flex-basis: calc((100% - 60px) / 3);
 
-    &:focus &__item-overlay {
+    &:focus .portfolio-list__item-overlay {
       transform: translateY(0);
     }
+  }
+
+  &__item figcaption {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__item-shadow:hover .portfolio-list__item-overlay {
+    transform: translateY(0);
+  }
+
+  &__item-shadow:hover .portfolio-list__item-image {
+    box-shadow: 0px 4px 4px $portfolioBoxShadow;
+    cursor: pointer;
+  }
+
+  &__item-shadow:hover .portfolio-list__item-border {
+    box-shadow: 0px 1px 1px $portfolioBoxShadow2;
+    cursor: pointer;
+  }
+
+  &__item-image {
+    position: relative;
+    overflow: hidden;
   }
 
   &__item-overlay {
@@ -70,30 +86,6 @@
     transition-duration: 250ms;
     transition-timing-function: $defaultTransitionTimingFunction;
     transform: translateY(101%);
-  }
-
-  &__item figcaption {
-    display: flex;
-    flex-direction: column;
-  }
-
-  &__item-shadow:hover &__item-overlay {
-    transform: translateY(0);
-  }
-
-  &__item-shadow:hover &__item-image {
-    box-shadow: 0px 4px 4px $portfolioBoxShadow;
-    cursor: pointer;
-  }
-
-  &__item-shadow:hover &__item-border {
-    box-shadow: 0px 1px 1px $portfolioBoxShadow2;
-    cursor: pointer;
-  }
-
-  &__item-image {
-    position: relative;
-    overflow: hidden;
   }
 
   &__item-border {

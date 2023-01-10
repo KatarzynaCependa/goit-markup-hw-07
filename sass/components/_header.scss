@@ -16,10 +16,6 @@
   &__nav-list {
     display: flex;
     margin-left: 93px;
-
-    &--no-bullets {
-      list-style: none;
-    }
   }
 
   &__nav-list li:not(:last-child) {
@@ -42,10 +38,10 @@
     &:hover,
     &:focus {
       color: $active;
+    }
 
-      &--is-active {
-        color: $active;
-      }
+    &--is-active {
+      color: $active;
     }
 
     &--is-active::after {
@@ -76,7 +72,7 @@
     display: flex;
   }
 
-  &__contacts a {
+  &__contacts &__contacts-item {
     display: flex;
     align-items: center;
   }
