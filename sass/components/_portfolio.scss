@@ -50,16 +50,16 @@
     flex-direction: column;
   }
 
-  &__item-shadow:hover .portfolio-list__item-overlay {
+  &__item-shadow:hover &__item-overlay {
     transform: translateY(0);
   }
 
-  &__item-shadow:hover .portfolio-list__item-image {
+  &__item-shadow:hover &__item-image {
     box-shadow: 0px 4px 4px $portfolioBoxShadow;
     cursor: pointer;
   }
 
-  &__item-shadow:hover .portfolio-list__item-border {
+  &__item-shadow:hover &__item-border {
     box-shadow: 0px 1px 1px $portfolioBoxShadow2;
     cursor: pointer;
   }
