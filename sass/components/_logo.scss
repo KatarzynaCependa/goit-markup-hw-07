@@ -5,20 +5,13 @@
   line-height: 1.19;
   letter-spacing: 0.03em;
   text-decoration: none;
+  color: $active;
 
-  &--header {
+  &__black {
     color: $logoDark;
   }
 
-  &--header span {
-    color: $active;
-  }
-
-  &--footer {
+  &__white {
     color: $white;
-  }
-
-  &--footer span {
-    color: $active;
   }
 }
