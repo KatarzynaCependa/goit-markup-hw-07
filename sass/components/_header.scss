@@ -18,7 +18,7 @@
     margin-left: 93px;
   }
 
-  &__nav-list li:not(:last-child) {
+  &__nav-list &__nav-list-item:not(:last-child) {
     margin-right: 46px;
   }
 
